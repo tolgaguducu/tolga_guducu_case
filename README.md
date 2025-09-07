@@ -69,19 +69,20 @@ allure serve allure-results
 
 ## 📂 Project Structure
 .
-├── pages/                          # Contains the Page Object Model (POM) classes.
-│   ├── base_page.py                # A base class for all page objects with common methods.
-│   ├── careers_page.py
-│   ├── home_page.py
-│   ├── qa_jobs_page.py
-│   └── lever_page.py
-├── tests/                          # Contains the actual test scripts.
-│   ├── conftest.py                 # Pytest fixtures for setup/teardown and failure hooks.
-│   └── test_career_application.py
-├── utils/                          # Contains reusable utilities.
-│   └── driver_factory.py           # The factory for creating WebDriver instances.
-├── logs/                           # Contains .log files generated during test runs.
-├── allure-results/                 # Stores raw Allure result data (auto-generated).
-├── .env                            # Environment variables for IDE path configuration.
-├── pytest.ini                      # Pytest configuration file.
-└── requirements.txt                # A list of the project's Python dependencies.
+├── pages/ # Contains the Page Object Model (POM) classes.
+│ ├── base_page.py # A base class for all page objects with common methods.
+│ ├── careers_page.py # Page object for the Careers page.
+│ ├── home_page.py # Page object for the Home page.
+│ ├── qa_jobs_page.py # Page object for QA Jobs listing page.
+│ └── lever_page.py # Page object for Lever application form.
+├── tests/ # Contains the actual test scripts.
+│ ├── conftest.py # Pytest fixtures for setup/teardown and failure hooks.
+│ └── test_career_application.py # Test case for career application flow.
+├── utils/ # Contains reusable utilities.
+│ └── driver_factory.py # Factory for creating WebDriver instances.
+├── allure-results/ # Stores raw Allure result data (auto-generated).
+├── logs/ # Contains .log files generated during test runs.
+├── .env # Environment variables for IDE path configuration.
+├── .gitignore # Specifies intentionally untracked files to ignore.
+├── pytest.ini # Pytest configuration file.
+└── requirements.txt # Python dependencies for the project.
