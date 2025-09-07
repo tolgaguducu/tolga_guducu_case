@@ -67,22 +67,26 @@ After the test run is complete, use the Allure command-line tool to serve the in
 allure serve allure-results
 ```
 
-## 📂 Project Structure
+
+## 📁 Project Structure
+
+```
 .
-├── pages/ # Contains the Page Object Model (POM) classes.
-│ ├── base_page.py # A base class for all page objects with common methods.
-│ ├── careers_page.py # Page object for the Careers page.
-│ ├── home_page.py # Page object for the Home page.
-│ ├── qa_jobs_page.py # Page object for QA Jobs listing page.
-│ └── lever_page.py # Page object for Lever application form.
-├── tests/ # Contains the actual test scripts.
-│ ├── conftest.py # Pytest fixtures for setup/teardown and failure hooks.
-│ └── test_career_application.py # Test case for career application flow.
-├── utils/ # Contains reusable utilities.
-│ └── driver_factory.py # Factory for creating WebDriver instances.
-├── allure-results/ # Stores raw Allure result data (auto-generated).
-├── logs/ # Contains .log files generated during test runs.
-├── .env # Environment variables for IDE path configuration.
-├── .gitignore # Specifies intentionally untracked files to ignore.
-├── pytest.ini # Pytest configuration file.
-└── requirements.txt # Python dependencies for the project.
+├── pages/                # Page Object Model (POM) sınıfları
+│   ├── base_page.py      # Tüm page object'ler için ortak metotlar (base class)
+│   ├── careers_page.py   # Careers sayfası ile ilgili element & metotlar
+│   ├── home_page.py      # Home sayfası için page object
+│   ├── qa_jobs_page.py   # QA job listing sayfası için page object
+│   └── lever_page.py     # Lever başvuru formu ile ilgili page object
+├── tests/                # Test senaryoları
+│   ├── conftest.py       # Pytest fixture'ları (setup/teardown, failure hook'ları)
+│   └── test_career_application.py  # Kariyer başvurusu akışı testi
+├── utils/                # Tekrar kullanılabilir yardımcı fonksiyonlar
+│   └── driver_factory.py # WebDriver oluşturan factory
+├── allure-results/       # Allure ham sonuçları (ci/pytest tarafından üretilir)
+├── logs/                 # Test çalıştırmaları sırasında oluşturulan .log dosyaları
+├── .env                  # IDE / local environment için gizli/konfigürasyon değişkenleri
+├── .gitignore            # Git tarafından takip edilmeyecek dosyalar
+├── pytest.ini            # Pytest yapılandırma ayarları
+└── requirements.txt      # Projenin Python bağımlılıkları
+```
