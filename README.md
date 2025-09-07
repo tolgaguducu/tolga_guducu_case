@@ -70,7 +70,7 @@ allure serve allure-results
 
 ## 📁 Project Structure
 
-```
+```bash
 .
 ├── pages/                # Page Object Model (POM) sınıfları
 │   ├── base_page.py      # Tüm page object'ler için ortak metotlar (base class)
